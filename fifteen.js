@@ -1,30 +1,42 @@
 window.onload = function fifteen(){
-	var y = 100;
-	var x = 100;
+	var puzzle = [];
+    var element = [];
+    var row = 0, right = 0, top = 0, col = 0;
 
-	var element = document.getElementById("puzzlearea").querySelectorAll("div");
-       for (var i = 0; i < 15; i++){
-	     element[i].classList.add("puzzlepiece");
-         }
-         
-        function ChangeBgPos () {
-            var selects = document.getElementsByClassName ("puzzlepiece");
+	puzzle =  $("#puzzlearea div");
 
-            
-            var selectStates = [];
-            for (var i=0; i < selects.length; i++) {
-                var whichSelected = selects[i].selectedIndex;
-                selectStates.push (selects[i].options[whichSelected].text);
-            }
+	 for (var i=0;i<puzzle.length;i++){
+        puzzle[i].classList.add("puzzlepiece");
+       /* puzzle[i].style.backgroundPosition = "" + (col*100*-1) + "px " + (row*100*-1) + "px";
+			
+		puzzle[i].style.left="" + (col*100) + "px";*/
+        puzzle[i].style.backgroundSize = "400px 400px";
 
-            var div = document.getElementByClassName ("puzzlepiece");
-
-            if ('backgroundPositionX' in div.style) {
-                div.style.backgroundPositionX = selectStates[0];
-                div.style.backgroundPositionY = selectStates[1];
-            } else {
-                div.style.backgroundPosition = (selectStates[0] + " " + selectStates[1]);
-            }
-        }
-     
+        
+    }
+     for (var j = 0;j<puzzle.length;j++){
+     	     
+     	     puzzle[j].style.left="" + (col*100) + "px";
+     	     puzzle[j].style.top="" + (row*100) + "px";
+     		
+     	        
+     	        col++;
+		        if(col>3){
+			    row+=1;
+			    col=0;
+			    }
+     	          
+           }
+     	
+     	/*document.getElementById("shufflebutton").addEventListener('click', shufflePuzzle);*/
+     	var movePiece = (piece, x,y) =>{
+		piece.style.left = x + 'px';
+		piece.style.top = y + 'px';
+		
+		piece.id = findEmpty();
+	    }
+       
+        var findSquare = (x,y) => {
+		
+	}
 }
