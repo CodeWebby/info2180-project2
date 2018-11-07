@@ -61,6 +61,9 @@ window.onload = function fifteen(){
 			by = puzzle[position].style.top;
 			puzzle[position].style.left = tempx;
 			puzzle[position].style.top = tempy;
+			$("puzzle[position]").fadeOut(400,"swing",function() {$("puzzle[position]").fadeIn(400,"swing");
+			
+			});
 			for(var i=0;i<puzzle.length;i++){
 				puzzle[i].classList.remove('movablepiece');
 			}
