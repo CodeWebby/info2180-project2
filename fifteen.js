@@ -69,17 +69,15 @@ window.onload = function fifteen(){
 			}
 		}
 		//check if the puzzle has been solved
-		if(isSolved()){
+		if(isSolved() == true){
 			for(i=0;i<puzzle.length;i++)
 			{
 				puzzle[i].style.backgroundImage = "url('background.jpg')";
 				puzzle[i].style.backgroundSize = "400px 400px";//let image size and grid size be the same
-				puzzle[i].style.borderColor = "#a6ff4d";
+				puzzle[i].style.orderColor = "#a6ff4d";
 			}
-			document.body.innerHTML =  "<h1>Congrats for using your brain!</h1>";//display  message
-			document.body.style.fontSize = "18pt";
-			document.body.style.color = "#a6ff4d" ;
-			document.body.style.fontFamily = "Times New Roman";
+			$("h1").html( "<h1>Congrats for using your brain!</h1>");//display  message
+			$("h1").css({"font-size": "18pt","color" :"#a6ff4d","font-family":"Times New Roman"});
 		}
 	     }
 			
@@ -106,10 +104,8 @@ window.onload = function fifteen(){
 				puzzle[i].style.backgroundSize = "400px 400px";
 				puzzle[i].style.borderColor = "black";
 			}
-			document.body.innerHTML =  "<h1>Fifteen Puzzles!</h1>";
-			document.body.style.fontSize = "18pt";
-			document.body.style.color = "black" ;
-			document.body.style.fontFamily = "Times New Roman";
+			$("h1").html("<h1>Fifteen Puzzles!</h1>");
+			$("h1").css({"font-size":"18pt", "color": "black","font-family": "Times New Roman");
 		}
 		 		           
 	
