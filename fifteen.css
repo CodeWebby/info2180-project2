@@ -19,10 +19,13 @@ body {
 	padding-top: 10px;
 	text-align: center;
 }
-
+p{
+	color: white;
+}
 h1 {
 	margin: 10px 0px;
 	text-align: center;
+	color: white;
 }
 
 /* Used to center the puzzle. */

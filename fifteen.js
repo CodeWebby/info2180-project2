@@ -11,7 +11,7 @@ window.onload = function fifteen(){
 	var solvedleft = new Array();
 	var solvedtop = new Array();
 
-	
+	   document.getElementById("back").style.backgroundImage = "url('Space.jpg')";
 
 	 for (var i=0;i<puzzle.length;i++){
         puzzle[i].classList.add("puzzlepiece");
@@ -61,7 +61,7 @@ window.onload = function fifteen(){
 			by = puzzle[position].style.top;
 			puzzle[position].style.left = tempx;
 			puzzle[position].style.top = tempy;
-			$("puzzle[position]").fadeOut(400,"swing",function() {$("puzzle[position]").fadeIn(400,"swing");
+			$("puzzle[position]").fadeOut(400,"linear",function() {$("puzzle[position]").fadeIn(400,"swing");
 			
 			});
 			for(var i=0;i<puzzle.length;i++){
@@ -105,7 +105,7 @@ window.onload = function fifteen(){
 				puzzle[i].style.borderColor = "black";
 			}
 			$("h1").html("<h1>Fifteen Puzzles!</h1>");
-			$("h1").css({"font-size":"18pt", "color": "black","font-family": "Times New Roman");
+			$("h1").css({"font-size":"18pt", "color": "black","font-family": "Times New Roman"});
 		}
 		 		           
 	
